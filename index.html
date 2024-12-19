@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket - Product Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Products</h1>
+
+        <!-- Search and Filter -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search Products..." oninput="searchProducts()">
+        </div>
+
+        <!-- Display Products -->
+        <div id="product-list" class="product-list"></div>
+
+        <!-- Cart Section -->
+        <h2>Your Cart</h2>
+        <div id="cart-details">
+            <!-- Cart items will be displayed here -->
+        </div>
+
+        <!-- Go to Checkout -->
+        <button onclick="goToCheckout()">Proceed to Checkout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

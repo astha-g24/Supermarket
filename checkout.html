@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+
+        <!-- Cart Details -->
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </div>
+
+        <!-- Customer Information -->
+        <div class="customer-info">
+            <h3>Customer Information</h3>
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name">
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email">
+            <label for="customer-phone">Phone:</label>
+            <input type="text" id="customer-phone">
+        </div>
+
+        <!-- Apply Discount -->
+        <div class="discount">
+            <label for="discount-code">Discount Code:</label>
+            <input type="text" id="discount-code">
+            <button onclick="applyDiscount()">Apply</button>
+            <p id="discount-message"></p>
+        </div>
+
+        <!-- Generate Receipt -->
+        <button id="generate-receipt" onclick="generateReceipt()">Generate Receipt</button>
+
+        <!-- Receipt Modal -->
+        <div id="receipt-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h2>Receipt</h2>
+                <pre id="receipt-details"></pre>
+                <button onclick="printReceipt()">Print Receipt</button>
+            </div>
+        </div>
+
+        <!-- Back to Product Selection Button -->
+        <button onclick="goBack()">Back to Product Selection</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
